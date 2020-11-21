@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/tomImage"
+            android:layout_width="75dp"
+            android:layout_height="93dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="35dp"
+            android:layout_toStartOf="@+id/tomText"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/tom" />
+
+        <ImageView
+            android:id="@+id/jerryImage"
+            android:layout_width="38dp"
+            android:layout_height="77dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="49dp"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/jerry" />
+
+        <EditText
+            android:id="@+id/jerryText"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="68dp"
+            android:layout_toStartOf="@+id/jerryImage"
+            android:contentDescription="@null"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/jerryText"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/tomText"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="70dp"
+            android:layout_toStartOf="@+id/jerryText"
+            android:contentDescription="@null"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/tomText"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="72dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="68dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton3"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="52dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="88dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton5"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="88dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton6"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="88dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton7"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toStartOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton8"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="76dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <com.example.lab4tomtactoe.Card
+        android:id="@+id/imageButton9"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="76dp"
+        android:onClick="onClickChangeImage"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton6"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

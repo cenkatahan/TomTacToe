@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TomTacToe</string>
+
+    <string name="imageDescription">Blade Runner 2049</string>
+    <string name="buttonText">GO TO GAME SCREEN</string>
+
+    <string name="tomText">TOM</string>
+    <string name="jerryText">JERRY</string>
+</resources>
